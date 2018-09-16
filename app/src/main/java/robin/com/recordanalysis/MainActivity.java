@@ -149,6 +149,10 @@ public class MainActivity extends AppCompatActivity {
             TextView tv_number = (TextView) view.findViewById(R.id.tv_number);
             TextView tv_date = (TextView) view.findViewById(R.id.tv_date);
             TextView tv_type = (TextView) view.findViewById(R.id.tv_type);
+            TextView tv_cnt = (TextView) view.findViewById(R.id.tv_cnt);
+            TextView tv_name = (TextView) view.findViewById(R.id.tv_name);
+            TextView tv_duration = (TextView) view.findViewById(R.id.tv_duration);
+
             // 设置控件内容
             CallInfo info = infos.get(position);
             // 号码
@@ -175,6 +179,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
             tv_type.setText(type);
+            tv_cnt.setText(info.cnt+"");
+            tv_name.setText(info.name+"");
+            tv_duration.setText(info.duration + "");
             tv_type.setTextColor(textColor);
 
             return view;
